@@ -75,7 +75,7 @@ public class BuyButtonScript : MonoBehaviour
 
                         }
                     }
-                    if (PlayerPrefs.GetInt("MergeAlaniDolulukAdeti") == 3)
+                    if (PlayerPrefs.GetInt("MergeAlaniDolulukAdeti") == _mergeAlaniParent.transform.childCount)
                     {
                         transform.GetComponent<Button>().interactable = false;
                     }
