@@ -11,7 +11,7 @@ public class UIController : MonoBehaviour
     public Text gamePlayScoreText, winScreenScoreText, levelNoText, tapToStartScoreText, totalElmasText;
     public Animator ScoreTextAnim;
 
-
+    public float _araDeger;
 
     // singleton yapisi burada kuruluyor.
     private void Awake()
@@ -81,7 +81,17 @@ public class UIController : MonoBehaviour
     /// </summary>
     public void SetGamePlayScoreText()
     {
-        gamePlayScoreText.text = PlayerPrefs.GetInt("totalScore").ToString();
+        if (PlayerPrefs.GetFloat("totalScore")<1000)
+        {
+            gamePlayScoreText.text = PlayerPrefs.GetFloat("totalScore").ToString();
+
+        }
+        else
+        {
+            _araDeger = PlayerPrefs.GetFloat("totalScore") / 1000;
+            gamePlayScoreText.text = _araDeger.ToString("0.##") +" K";
+
+        }
     }
 
 
@@ -223,7 +233,17 @@ public class UIController : MonoBehaviour
         WinPanel.SetActive(false);
         LoosePanel.SetActive(false);
         GamePanel.SetActive(false);
-        tapToStartScoreText.text = PlayerPrefs.GetInt("totalScore").ToString();
+        if (PlayerPrefs.GetFloat("totalScore") < 1000)
+        {
+            tapToStartScoreText.text = PlayerPrefs.GetFloat("totalScore").ToString();
+
+        }
+        else
+        {
+            _araDeger = PlayerPrefs.GetFloat("totalScore") / 1000;
+            tapToStartScoreText.text = _araDeger.ToString("0.##") + " K";
+
+        }
     }
 
 

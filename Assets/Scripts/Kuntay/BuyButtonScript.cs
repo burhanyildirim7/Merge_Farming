@@ -18,7 +18,7 @@ public class BuyButtonScript : MonoBehaviour
             _turretBedel.text = "FREE";
             PlayerPrefs.SetInt("TurretBedelBaslangic", 1);
 
-            PlayerPrefs.SetInt("totalScore", 999999);  // TOTAL SCORE BAŞLANGIÇ AYARININ YERİ
+            PlayerPrefs.SetFloat("totalScore", 999999);  // TOTAL SCORE BAŞLANGIÇ AYARININ YERİ
             UIController.instance.SetGamePlayScoreText();
 
             PlayerPrefs.SetInt("TurretBedel", 0);
@@ -33,9 +33,19 @@ public class BuyButtonScript : MonoBehaviour
             {
                 _turretBedel.text = "$" + (PlayerPrefs.GetInt("TurretBedel"));
 
+               /*if (PlayerPrefs.GetInt("TurretBedel")<1000)
+                {
+                    _turretBedel.text = "$" + (PlayerPrefs.GetInt("TurretBedel"));
+
+                }
+                else
+                {
+                    _turretBedel.text = "$" + ((PlayerPrefs.GetInt("TurretBedel")/1000).ToString("0.##")+" K");
+
+                }*/
+
             }
             PlayerPrefs.SetInt("MergeAlaniDolulukAdeti", 0);
-            PlayerPrefs.SetInt("totalScore", 999999);
         }
     }
 
@@ -57,7 +67,7 @@ public class BuyButtonScript : MonoBehaviour
             {
                 _timer = 0;
 
-                if (PlayerPrefs.GetInt("totalScore") < PlayerPrefs.GetInt("TurretBedel"))
+                if (PlayerPrefs.GetFloat("totalScore") < PlayerPrefs.GetInt("TurretBedel"))
                 {
                     transform.GetComponent<Button>().interactable = false;
                 }
@@ -119,19 +129,38 @@ public class BuyButtonScript : MonoBehaviour
             }
         }
 
-        PlayerPrefs.SetInt("totalScore", PlayerPrefs.GetInt("totalScore") - PlayerPrefs.GetInt("TurretBedel"));
+        PlayerPrefs.SetFloat("totalScore", PlayerPrefs.GetFloat("totalScore") - PlayerPrefs.GetInt("TurretBedel"));
         UIController.instance.SetGamePlayScoreText();
         if (PlayerPrefs.GetInt("ButonaBasmaSayisi") > 0)
         {
             PlayerPrefs.SetInt("TurretBedel", PlayerPrefs.GetInt("TurretBedel") + (PlayerPrefs.GetInt("ButonaBasmaSayisi") - 1) * 17 + 5);
-            _turretBedel.text = "$" + (PlayerPrefs.GetInt("TurretBedel"));
+            //_turretBedel.text = "$" + (PlayerPrefs.GetInt("TurretBedel"));
+            if (PlayerPrefs.GetInt("TurretBedel") < 1000)
+            {
+                _turretBedel.text = "$" + (PlayerPrefs.GetInt("TurretBedel"));
+
+            }
+            else
+            {
+                _turretBedel.text = "$" + ((PlayerPrefs.GetInt("TurretBedel") / 1000).ToString("0.##") + " K");
+
+            }
 
         }
         else
         {
             PlayerPrefs.SetInt("TurretBedel", PlayerPrefs.GetInt("TurretBedel") + 0);
             _turretBedel.text = "$" + (PlayerPrefs.GetInt("TurretBedel"));
+            /*if (PlayerPrefs.GetInt("TurretBedel") < 1000)
+            {
+                _turretBedel.text = "$" + (PlayerPrefs.GetInt("TurretBedel"));
 
+            }
+            else
+            {
+                _turretBedel.text = "$" + ((PlayerPrefs.GetInt("TurretBedel") / 1000).ToString("0.##") + " K");
+
+            }*/
         }
         transform.GetComponent<Button>().interactable = true;
 

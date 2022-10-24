@@ -22,7 +22,7 @@ public class UpgradeScript : MonoBehaviour
             PlayerPrefs.SetInt("IncomeLevel", 1);
 
             PlayerPrefs.SetInt("FireRateBedel", PlayerPrefs.GetInt("FireRateBedel") + 100);
-            PlayerPrefs.SetInt("IncomeBedel", PlayerPrefs.GetInt("IncomeBedel") + 100);
+            PlayerPrefs.SetFloat("IncomeBedel", PlayerPrefs.GetFloat("IncomeBedel") + 100);
 
             PlayerPrefs.SetInt("UpgradeIlkSefer", 1);
         }
@@ -30,14 +30,25 @@ public class UpgradeScript : MonoBehaviour
         {
             _fireRateText.text = "LEVEL" + PlayerPrefs.GetInt("FireRateLevel").ToString();
             _incomeText.text = "+$" + (PlayerPrefs.GetFloat("Income") - 10).ToString();
-            _incomeBedel.text = "$" + (PlayerPrefs.GetInt("IncomeBedel"));
+            _incomeBedel.text = "$" + (PlayerPrefs.GetFloat("IncomeBedel"));
+
+            /*if (PlayerPrefs.GetInt("IncomeBedel")<1000)
+            {
+                _incomeBedel.text = "$" + (PlayerPrefs.GetInt("IncomeBedel"));
+
+            }
+            else
+            {
+                _incomeBedel.text = "$" + ((PlayerPrefs.GetInt("IncomeBedel")/1000).ToString("0.##")+" K");
+
+            }*/
             _fireRateBedel.text = "$" + (PlayerPrefs.GetInt("FireRateBedel"));
         }
     }
 
     void Update()
     {
-        if (PlayerPrefs.GetInt("totalScore") < PlayerPrefs.GetInt("FireRateBedel"))
+        if (PlayerPrefs.GetFloat("totalScore") < PlayerPrefs.GetInt("FireRateBedel"))
         {
             _fireRateText.transform.parent.transform.GetComponent<Button>().interactable = false;
 
@@ -46,7 +57,7 @@ public class UpgradeScript : MonoBehaviour
         {
             _fireRateText.transform.parent.transform.GetComponent<Button>().interactable = true;
         }
-        if (PlayerPrefs.GetInt("totalScore") < PlayerPrefs.GetInt("IncomeBedel"))
+        if (PlayerPrefs.GetFloat("totalScore") < PlayerPrefs.GetFloat("IncomeBedel"))
         {
             _incomeText.transform.parent.transform.GetComponent<Button>().interactable = false;
 
@@ -78,11 +89,21 @@ public class UpgradeScript : MonoBehaviour
         PlayerPrefs.SetInt("IncomeLevel", PlayerPrefs.GetInt("IncomeLevel")+1);
         _incomeText.text = "+$" + (PlayerPrefs.GetFloat("Income")-10).ToString();
 
-        PlayerPrefs.SetInt("totalScore", PlayerPrefs.GetInt("totalScore") - PlayerPrefs.GetInt("IncomeBedel"));
+        PlayerPrefs.SetFloat("totalScore", PlayerPrefs.GetFloat("totalScore") - PlayerPrefs.GetFloat("IncomeBedel"));
         UIController.instance.SetGamePlayScoreText();
 
-        PlayerPrefs.SetInt("IncomeBedel", PlayerPrefs.GetInt("IncomeBedel") + +(PlayerPrefs.GetInt("IncomeLevel") - 1) * 100 + 100);
-        _incomeBedel.text = "$" + (PlayerPrefs.GetInt("IncomeBedel"));
+        PlayerPrefs.SetFloat("IncomeBedel", PlayerPrefs.GetFloat("IncomeBedel") + +(PlayerPrefs.GetInt("IncomeLevel") - 1) * 100 + 100);
+        _incomeBedel.text = "$" + (PlayerPrefs.GetFloat("IncomeBedel"));
+        /*if (PlayerPrefs.GetInt("IncomeBedel") < 1000)
+        {
+            _incomeBedel.text = "$" + (PlayerPrefs.GetInt("IncomeBedel"));
+
+        }
+        else
+        {
+            _incomeBedel.text = "$" + ((PlayerPrefs.GetInt("IncomeBedel") / 1000).ToString("0.##") + " K");
+
+        }*/
     }
     public void CloseWindowButton()
     {

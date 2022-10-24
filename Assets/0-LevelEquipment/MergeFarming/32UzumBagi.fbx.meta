@@ -3,7 +3,37 @@ guid: fac813b0e3e5a4a7aab17198ab773811
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #32
+    second: {fileID: 2100000, guid: 2264e6b9c02db417f8fe45b26e8fb997, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mor.001
+    second: {fileID: 2100000, guid: 989ea8ddfd96f4ca78bf3f0b09e534ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Toprak
+    second: {fileID: 2100000, guid: 84781a9a236af49a395a394900aa976d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yesil
+    second: {fileID: 2100000, guid: 3a37c422440e64655bffc944eb10895e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yesil.005
+    second: {fileID: 2100000, guid: a867fcb706eba4cb394a7bf303273d50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tahta
+    second: {fileID: 2100000, guid: 2672eabb87881460c837c0c9064734b5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
