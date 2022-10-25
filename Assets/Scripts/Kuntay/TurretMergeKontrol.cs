@@ -27,7 +27,7 @@ public class TurretMergeKontrol : MonoBehaviour
         }
         else
         {
-            if (_turretNum == 64)
+            if (_turretNum >= 64)
             {
 
             }

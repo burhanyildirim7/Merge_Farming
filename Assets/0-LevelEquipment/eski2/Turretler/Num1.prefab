@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91969678239269529}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150a7e6a3a6e6476daeddef6ee693179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _temas: 0
   _generatorTemas: 0
+  _field: 1
 --- !u!1 &1714553345850037901
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,8 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150a7e6a3a6e6476daeddef6ee693179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _temas: 0
   _generatorTemas: 0
+  _field: 1
 --- !u!1 &3438028215609736986
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,8 +420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150a7e6a3a6e6476daeddef6ee693179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _temas: 0
   _generatorTemas: 0
+  _field: 1
 --- !u!1 &4462309773905069255
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,7 +473,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4462309773905069255}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -523,6 +523,7 @@ MonoBehaviour:
   _anaRenk: {fileID: 2100000, guid: 1fd1f09cd966ff94eb6455c5aa18bc51, type: 2}
   _griRenk: {fileID: 2100000, guid: f9f895e8b889b404d9e6e082aa1ba760, type: 2}
   _conncetionParent: {fileID: 91969678239269529}
+  _temasEdilenObjeler: []
   _isMergeAlani: 0
   _CONNECTION: 0
   _WORKING: 0
@@ -586,7 +587,7 @@ Transform:
   - {fileID: 1326240817504713913}
   - {fileID: 4923747326662633083}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &7809815534339017634
 GameObject:
@@ -715,5 +716,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150a7e6a3a6e6476daeddef6ee693179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _temas: 0
   _generatorTemas: 0
+  _field: 1

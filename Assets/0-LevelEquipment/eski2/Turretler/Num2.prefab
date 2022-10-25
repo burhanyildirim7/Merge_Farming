@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701806653680507719}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -164,7 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150a7e6a3a6e6476daeddef6ee693179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _temas: 0
+  _generatorTemas: 0
+  _field: 1
 --- !u!1 &2889119661771995874
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150a7e6a3a6e6476daeddef6ee693179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _temas: 0
+  _generatorTemas: 0
+  _field: 1
 --- !u!1 &3773205589105754543
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +455,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150a7e6a3a6e6476daeddef6ee693179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _temas: 0
+  _generatorTemas: 0
+  _field: 1
 --- !u!1 &4947044680230375332
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150a7e6a3a6e6476daeddef6ee693179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _temas: 0
+  _generatorTemas: 0
+  _field: 1
 --- !u!1 &5295044527538527712
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,7 +713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150a7e6a3a6e6476daeddef6ee693179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _temas: 0
+  _generatorTemas: 0
+  _field: 1
 --- !u!1 &6633570603701782435
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +766,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6633570603701782435}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -811,8 +816,10 @@ MonoBehaviour:
   _anaRenk: {fileID: 2100000, guid: a50b204be7b01ef4da52d0f7e5a1906f, type: 2}
   _griRenk: {fileID: 2100000, guid: f9f895e8b889b404d9e6e082aa1ba760, type: 2}
   _conncetionParent: {fileID: 701806653680507719}
+  _temasEdilenObjeler: []
   _isMergeAlani: 0
   _CONNECTION: 0
+  _WORKING: 0
 --- !u!65 &8932380648198490535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -969,4 +976,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150a7e6a3a6e6476daeddef6ee693179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _temas: 0
+  _generatorTemas: 0
+  _field: 1

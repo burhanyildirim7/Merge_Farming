@@ -13,13 +13,12 @@ public class mergeAlaniDoluluk : MonoBehaviour
         {
             Debug.Log("Pref Ilkkez Acma" + _soketNumber);
             PlayerPrefs.SetInt("OyunIlkKezAcildi" + _soketNumber, 1);
-            PlayerPrefs.SetInt("TurretGetir" + _soketNumber, 12);
+            PlayerPrefs.SetInt("TurretGetir" + _soketNumber, 9);
         }
         else
         {
-            if (PlayerPrefs.GetInt("TurretGetir" + _soketNumber) < 12)
+            if (PlayerPrefs.GetInt("TurretGetir" + _soketNumber) < 9)
             {
-                Debug.Log("lülülülül");
 
                 Instantiate(GameObject.Find("SOKETLER_PARENT").transform.GetComponent<PlayerPrefKontrol>()._turrets[PlayerPrefs.GetInt("TurretGetir" + _soketNumber)], null).transform.position =
         new Vector3(transform.position.x, 0.25f, transform.position.z);
@@ -40,12 +39,17 @@ public class mergeAlaniDoluluk : MonoBehaviour
             switch (other.transform.GetComponent<TurretMergeKontrol>()._turretNum)
             {
 
+
                 case 1:
                     _turretListeDeger = 0;
                     break;
 
                 case 2:
                     _turretListeDeger = 1;
+                    break;
+
+                case 3:
+                    _turretListeDeger = 7;
                     break;
 
                 case 4:
@@ -68,24 +72,8 @@ public class mergeAlaniDoluluk : MonoBehaviour
                     _turretListeDeger = 6;
                     break;
 
-                case 128:
-                    _turretListeDeger = 7;
-                    break;
-
-                case 256:
+                case 65:
                     _turretListeDeger = 8;
-                    break;
-
-                case 512:
-                    _turretListeDeger = 9;
-                    break;
-
-                case 1024:
-                    _turretListeDeger = 10;
-                    break;
-
-                case 2048:
-                    _turretListeDeger = 11;
                     break;
 
 
@@ -114,6 +102,10 @@ public class mergeAlaniDoluluk : MonoBehaviour
                     _turretListeDeger = 1;
                     break;
 
+                case 3:
+                    _turretListeDeger = 7;
+                    break;
+
                 case 4:
                     _turretListeDeger = 2;
                     break;
@@ -134,24 +126,8 @@ public class mergeAlaniDoluluk : MonoBehaviour
                     _turretListeDeger = 6;
                     break;
 
-                case 128:
-                    _turretListeDeger = 7;
-                    break;
-
-                case 256:
+                case 65:
                     _turretListeDeger = 8;
-                    break;
-
-                case 512:
-                    _turretListeDeger = 9;
-                    break;
-
-                case 1024:
-                    _turretListeDeger = 10;
-                    break;
-
-                case 2048:
-                    _turretListeDeger = 11;
                     break;
 
 
@@ -164,7 +140,7 @@ public class mergeAlaniDoluluk : MonoBehaviour
     {
         if (other.tag == "turret")
         {
-            PlayerPrefs.SetInt("TurretGetir" + _soketNumber, 12);
+            PlayerPrefs.SetInt("TurretGetir" + _soketNumber, 9);
 
 
         }

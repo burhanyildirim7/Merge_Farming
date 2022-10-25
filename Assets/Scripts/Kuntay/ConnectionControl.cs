@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class ConnectionControl : MonoBehaviour
 {
-    public bool _generatorTemas=false;
-
+    public bool _generatorTemas=false,_field;
+    private void Start()
+    {
+        if (_field)
+        {
+            _generatorTemas = true;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
 
@@ -14,7 +20,7 @@ public class ConnectionControl : MonoBehaviour
             transform.parent.transform.parent.GetChild(0).GetComponent<TaretRenkDegistirme>()._WORKING = true;
             _generatorTemas = true;
         }
-        else if (other.tag == "connection")
+        else if (other.tag == "connection" && _field == false)
         {
             transform.parent.transform.parent.GetChild(0).GetComponent<TaretRenkDegistirme>()._temasEdilenObjeler.Add(other.gameObject.transform.parent.transform.parent.GetChild(0).gameObject);
         }
@@ -28,7 +34,7 @@ public class ConnectionControl : MonoBehaviour
             transform.parent.transform.parent.GetChild(0).GetComponent<TaretRenkDegistirme>()._WORKING = true;
             _generatorTemas = true;
         }
-        else if (other.tag == "connection")
+        else if (other.tag == "connection" && _field == false)
         {
 
         }
@@ -59,7 +65,7 @@ public class ConnectionControl : MonoBehaviour
             transform.parent.transform.parent.GetChild(0).GetComponent<TaretRenkDegistirme>()._WORKING = false;
             _generatorTemas = false;
         }
-        else if (other.tag == "connection")
+        else if (other.tag == "connection" && _field==false)
         {
             /* if (transform.parent.transform.parent.transform.parent.transform.GetComponent<TurretMergeKontrol>()._objeYerde==false)
              {
