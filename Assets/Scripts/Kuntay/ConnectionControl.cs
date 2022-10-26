@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class ConnectionControl : MonoBehaviour
 {
-    public bool _generatorTemas=false,_field;
+    public bool _generatorTemas=false,_field,_fiskiyeAktif;
     private void Start()
     {
         if (_field)
         {
             _generatorTemas = true;
+            _fiskiyeAktif = false;
         }
     }
     private void OnTriggerEnter(Collider other)

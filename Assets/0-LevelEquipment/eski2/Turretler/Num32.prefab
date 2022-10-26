@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &1038670206496491551
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,8 +246,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.978395, y: 7.484319, z: 1.0003408}
-  m_Center: {x: 1.2896693, y: -2.417816, z: 0.5002313}
+  m_Size: {x: 1.1067557, y: 1.2081869, z: 1.0003408}
+  m_Center: {x: -0.014462471, y: -2.8253574, z: 0.5002313}
 --- !u!54 &7076890068140681558
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -392,6 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &1384723947335700811
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &1854902300352231131
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &3221115557145162293
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,6 +857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &3908802273197252784
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &4049528070899070536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &5907508792075222910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,6 +1247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &7029104579767531656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,6 +1377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &7286070760447732990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,3 +1507,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0

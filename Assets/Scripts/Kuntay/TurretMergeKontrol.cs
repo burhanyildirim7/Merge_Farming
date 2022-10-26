@@ -7,7 +7,7 @@ public class TurretMergeKontrol : MonoBehaviour
 {
     [SerializeField] GameObject _nextTurret;
     [SerializeField] public int _turretNum;
-    public bool _mergeEdilebilir, _objeYerde;
+    public bool _mergeEdilebilir, _objeYerde,_field,_fiskiye;
     private GameObject _mergeTahtası,_geciciTurret;
     // Start is called before the first frame update
     void Start()
@@ -33,29 +33,97 @@ public class TurretMergeKontrol : MonoBehaviour
             }
             else
             {
-                if (other.tag == "turret")
+                /*
+                if (_field)
                 {
-                    if (other.transform.GetComponent<TurretMergeKontrol>()._mergeEdilebilir)
+                    if (other.tag == "turret")
                     {
-                        if (_turretNum == other.gameObject.transform.GetComponent<TurretMergeKontrol>()._turretNum)
+                        if (other.transform.GetComponent<TurretMergeKontrol>()._mergeEdilebilir)
                         {
-                            /*if (Input.GetMouseButtonUp(0))
+                            if (_turretNum == other.gameObject.transform.GetComponent<TurretMergeKontrol>()._turretNum)
                             {
+                                MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
                                 _geciciTurret = Instantiate(_nextTurret, null);
-                                _geciciTurret.transform.position = other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position;
+                                if (_geciciTurret.transform.GetComponent<TurretMergeKontrol>()._turretNum == 2)
+                                {
+                                    _geciciTurret.transform.position = new Vector3(other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position.x + 0.5f,
+                                        other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position.y,
+                                        other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position.z);
+                                }
+                                else
+                                {
+                                    _geciciTurret.transform.position = other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position;
+
+                                }
                                 _geciciTurret.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                                 _geciciTurret.transform.DOScale(1, 0.2f);
                                 GameObject.Find("RAY_CONTROLLER").transform.GetComponent<RayKodlari>()._yakalananTurret = GameObject.Find("RAY_CONTROLLER").transform.GetComponent<RayKodlari>()._geciciKonum;
                                 Destroy(other.gameObject);
                                 Destroy(gameObject);
-                            }*/
+                            }
+                            else
+                            {
+
+                            }
+
+                        }
+                    }
+
+                }
+                else if (_fiskiye)
+                {
+                    if (other.tag == "fiskiye")
+                    {
+                        if (other.transform.GetComponent<TurretMergeKontrol>()._mergeEdilebilir)
+                        {
+                            if (_turretNum == other.gameObject.transform.GetComponent<TurretMergeKontrol>()._turretNum)
+                            {
+                                MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
+                                _geciciTurret = Instantiate(_nextTurret, null);
+                                if (_geciciTurret.transform.GetComponent<TurretMergeKontrol>()._turretNum == 2)
+                                {
+                                    _geciciTurret.transform.position = new Vector3(other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position.x + 0.5f,
+                                        other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position.y,
+                                        other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position.z);
+                                }
+                                else
+                                {
+                                    _geciciTurret.transform.position = other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position;
+
+                                }
+                                _geciciTurret.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                                _geciciTurret.transform.DOScale(1, 0.2f);
+                                GameObject.Find("RAY_CONTROLLER").transform.GetComponent<RayKodlari>()._yakalananTurret = GameObject.Find("RAY_CONTROLLER").transform.GetComponent<RayKodlari>()._geciciKonum;
+                                Destroy(other.gameObject);
+                                Destroy(gameObject);
+                            }
+                            else
+                            {
+
+                            }
+
+                        }
+                    }
+
+                }
+                else
+                {
+
+                }
+                */
+                if (other.tag == transform.tag)
+                {
+                    if (other.transform.GetComponent<TurretMergeKontrol>()._mergeEdilebilir)
+                    {
+                        if (_turretNum == other.gameObject.transform.GetComponent<TurretMergeKontrol>()._turretNum)
+                        {
                             MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
                             _geciciTurret = Instantiate(_nextTurret, null);
-                            if (_geciciTurret.transform.GetComponent<TurretMergeKontrol>()._turretNum==2)
+                            if (_geciciTurret.transform.GetComponent<TurretMergeKontrol>()._turretNum == 2)
                             {
-                                _geciciTurret.transform.position = new Vector3(other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position.x+0.5f,
+                                _geciciTurret.transform.position = new Vector3(other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position.x + 0.5f,
                                     other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position.y,
-                                    other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position.z) ;
+                                    other.gameObject.transform.GetComponent<TurretMergeKontrol>().transform.position.z);
                             }
                             else
                             {
@@ -75,6 +143,8 @@ public class TurretMergeKontrol : MonoBehaviour
 
                     }
                 }
+
+
             }
         }
     }

@@ -34,7 +34,7 @@ public class mergeAlaniDoluluk : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "turret")
+        if (other.tag == "turret" || other.tag == "fiskiye")
         {
             switch (other.transform.GetComponent<TurretMergeKontrol>()._turretNum)
             {
@@ -84,7 +84,7 @@ public class mergeAlaniDoluluk : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
 
-        if (other.tag == "turret")
+        if (other.tag == "turret" || other.tag == "fiskiye")
         {
             if (other.transform.GetComponent<TurretMergeKontrol>()._objeYerde)
             {
@@ -138,7 +138,7 @@ public class mergeAlaniDoluluk : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "turret")
+        if (other.tag == "turret" || other.tag == "fiskiye")
         {
             PlayerPrefs.SetInt("TurretGetir" + _soketNumber, 9);
 

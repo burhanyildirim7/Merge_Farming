@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &2922062999757628105
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &3124568970963663285
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &3402592274989498958
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &3910487398172853416
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &4092449288530866194
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4778542415324828651
 Transform:
   m_ObjectHideFlags: 0
@@ -813,6 +818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &5241854626055967496
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,8 +968,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.159073, y: 5.2740955, z: 3.6044326}
-  m_Center: {x: -1.199461, y: 1.2782965, z: -0.80215526}
+  m_Size: {x: 1.0021515, y: 0.97453296, z: 3.6044326}
+  m_Center: {x: -0.119477175, y: 0.045486446, z: -0.8021554}
 --- !u!54 &4103875780681954181
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1109,6 +1115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &8257756622593839866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,3 +1245,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0

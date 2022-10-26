@@ -36,6 +36,11 @@ public class RayKodlari : MonoBehaviour
                         _turretinYakalandigiKonum.transform.position = new Vector3(hitInfo.transform.position.x, .25f, hitInfo.transform.position.z);
                         _yakalananTurret = hitInfo.transform.gameObject;
                     }
+                    else if (hitInfo.transform.gameObject.tag == "fiskiye")
+                    {
+                        _turretinYakalandigiKonum.transform.position = new Vector3(hitInfo.transform.position.x, .25f, hitInfo.transform.position.z);
+                        _yakalananTurret = hitInfo.transform.gameObject;
+                    }
                     else
                     {
 
@@ -143,7 +148,8 @@ public class RayKodlari : MonoBehaviour
                             else
                             {
                                 _turretinYakalandigiKonum.transform.position = new Vector3(hitMergeInfo.transform.position.x, .25f, hitMergeInfo.transform.position.z);
-                                hitMergeInfo.transform.GetComponent<mergeAlaniDoluluk>()._doluluk = true;
+                                hitMergeInfo.transform.GetComponent<mergeAlaniDoluluk>().
+                                    _doluluk = true;
                             }
                             _yakalananTurret.transform.GetComponent<TurretMergeKontrol>()._mergeEdilebilir = true;
                         }

@@ -6,7 +6,7 @@ public class SoketDolulukAktiflestirme : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "soket")
+        if (other.tag == "soket"|| other.tag == "boruSoket")
         {
             if (other.transform.GetComponent<YapbozAlaniDoluluk>()._soketDoluluk == false)
             {
@@ -21,7 +21,7 @@ public class SoketDolulukAktiflestirme : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "soket")
+        if (other.tag == "soket" || other.tag == "boruSoket")
         {
             if (other.transform.GetComponent<YapbozAlaniDoluluk>()._soketDoluluk == true)
             {

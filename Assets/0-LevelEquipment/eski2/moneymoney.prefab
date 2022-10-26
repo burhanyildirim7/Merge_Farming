@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 2975581557053270833}
   - component: {fileID: 2794699703800433311}
   - component: {fileID: 2210773493134195611}
-  - component: {fileID: 1892298827778918135}
   - component: {fileID: -7125681373791708128}
   m_Layer: 11
   m_Name: moneymoney
@@ -202,8 +201,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3846018093981099296, guid: 7f6d9ce2285174e01bc313e63d6fa383, type: 3}
-  - {fileID: -6478536213147159724, guid: 7f6d9ce2285174e01bc313e63d6fa383, type: 3}
+  - {fileID: 2100000, guid: e678b8a4ca24e4641b2c37bbb872fc49, type: 2}
+  - {fileID: 2100000, guid: a2790175485994ef5843403988b886a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -254,22 +253,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &1892298827778918135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3624166079958518500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114dac3abf1c6427faedcf98f7999a73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _paraBlastFX: {fileID: 190236, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-  _paraTextCanvas: {fileID: 6956231531489499595}
-  _ucusHedefObjesi: {fileID: 7110846413992989445}
-  _parentObject: {fileID: 0}
 --- !u!82 &-7125681373791708128
 AudioSource:
   m_ObjectHideFlags: 0
@@ -281,7 +264,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c3d334d7b71704c149d9a7fd4ece864b, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

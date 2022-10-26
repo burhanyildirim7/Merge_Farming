@@ -36,7 +36,7 @@ public class KatsayiCarpanlari : MonoBehaviour
                     _sayac++;
                 }
 
-                if (_sayac==7)
+                if (_sayac== _soketler.Count)
                 {
                     _katsayiAktif = true;
                     _aktifObje.SetActive(true);

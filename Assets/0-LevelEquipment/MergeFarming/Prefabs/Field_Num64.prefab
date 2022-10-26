@@ -259,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &1507351665592522449
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +370,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 5, z: 1}
+  m_Size: {x: 0.5, y: 5, z: 0.5}
   m_Center: {x: 0, y: -2, z: 0}
 --- !u!114 &9098029923939514845
 MonoBehaviour:
@@ -387,6 +388,8 @@ MonoBehaviour:
   _turretNum: 64
   _mergeEdilebilir: 0
   _objeYerde: 0
+  _field: 1
+  _fiskiye: 0
 --- !u!54 &475441497407382741
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -418,7 +421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &141191710844423313
 Transform:
   m_ObjectHideFlags: 0
@@ -655,6 +658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &2356440542006047424
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +806,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.5, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1611631089769079966
 Rigidbody:
@@ -961,6 +965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &3380939260073578127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +1011,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.5, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &117306953194884840
 Rigidbody:
@@ -1152,7 +1157,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.7131624, y: 5.696711, z: 3.872688}
+  m_Size: {x: 1, y: 1, z: 3.872688}
   m_Center: {x: 0.053245544, y: -0.015930176, z: -0.93628323}
 --- !u!54 &4375155152059223285
 Rigidbody:
@@ -1334,6 +1339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &4225530298036494407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,7 +1632,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.5, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2231187588690514949
 Rigidbody:
@@ -1785,6 +1791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &7351432572435179021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,6 +1921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &7492599302063771078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,6 +2131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &8520020402799696247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,7 +2177,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.5, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1559991683918783153
 Rigidbody:
@@ -2457,6 +2466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _generatorTemas: 0
   _field: 1
+  _fiskiyeAktif: 0
 --- !u!1 &9167941501105110411
 GameObject:
   m_ObjectHideFlags: 0

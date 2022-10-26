@@ -10,9 +10,20 @@ public class SoketKontrolEtme : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag=="soket")
+        if (other.tag=="soket" && transform.parent.parent.tag=="turret")
         {
             if (other.transform.GetComponent<YapbozAlaniDoluluk>()._soketDoluluk==false)
+            {
+                _objeYerlestirilebilir = true;
+            }
+            else
+            {
+                _objeYerlestirilebilir = false;
+            }
+        }
+        else if (other.tag == "boruSoket" && transform.parent.parent.tag == "fiskiye")
+        {
+            if (other.transform.GetComponent<YapbozAlaniDoluluk>()._soketDoluluk == false)
             {
                 _objeYerlestirilebilir = true;
             }

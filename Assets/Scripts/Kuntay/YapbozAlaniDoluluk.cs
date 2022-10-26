@@ -36,7 +36,7 @@ public class YapbozAlaniDoluluk : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag=="turret")
+        if (other.tag=="turret"|| other.tag == "fiskiye")
         {
             switch (other.transform.GetComponent<TurretMergeKontrol>()._turretNum)
             {
@@ -84,7 +84,7 @@ public class YapbozAlaniDoluluk : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "turret")
+        if (other.tag == "turret" || other.tag == "fiskiye")
         {
             switch (other.transform.GetComponent<TurretMergeKontrol>()._turretNum)
             {
@@ -130,7 +130,7 @@ public class YapbozAlaniDoluluk : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "turret")
+        if (other.tag == "turret" || other.tag == "fiskiye")
         {
             PlayerPrefs.SetInt("TurretGetir" + _soketNumber, 9);
 
