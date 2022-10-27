@@ -12,7 +12,9 @@ public class RayKodlari : MonoBehaviour
     [SerializeField] LayerMask _gorundlayerMask, _soketLayerMask, _mergeLayerMask, _paraAlaniLayer, _turretYakalaLayer;
     public GameObject _yakalananTurret;
     private Transform _turretinYakalandigiKonum;
-    private int _sayac, _sayac2;
+    private int _sayac, _sayac2,_tarlaSayac;
+    private GameObject _geciciTarla;
+    private bool _tarlaHazir;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +35,35 @@ public class RayKodlari : MonoBehaviour
                 {
                     if (hitInfo.transform.gameObject.tag == "turret")
                     {
-                        _turretinYakalandigiKonum.transform.position = new Vector3(hitInfo.transform.position.x, .25f, hitInfo.transform.position.z);
-                        _yakalananTurret = hitInfo.transform.gameObject;
+                        _geciciTarla = hitInfo.transform.gameObject;
+                        for (int i = 0; i < _geciciTarla.transform.GetComponent<TurretMergeKontrol>()._hasatObjesi.Count; i++)
+                        {
+                            if (_geciciTarla.transform.GetComponent<TurretMergeKontrol>()._hasatObjesi[i].GetComponent<SapScript>()._hasatEdilebilir)
+                            {
+                                _tarlaSayac++;
+                                break;
+                            }
+
+                        }
+                        if (_tarlaSayac== _geciciTarla.transform.GetComponent<TurretMergeKontrol>()._hasatObjesi.Count)
+                        {
+                            _tarlaSayac = 0;
+                            _tarlaHazir = false;
+                        }
+                        else
+                        {
+                            _tarlaSayac = 0;
+                            _tarlaHazir = true;
+                        }
+                        if (_tarlaHazir)
+                        {
+                            _turretinYakalandigiKonum.transform.position = new Vector3(hitInfo.transform.position.x, .25f, hitInfo.transform.position.z);
+                            _yakalananTurret = hitInfo.transform.gameObject;
+                        }
+                        else
+                        {
+
+                        }
                     }
                     else if (hitInfo.transform.gameObject.tag == "fiskiye")
                     {

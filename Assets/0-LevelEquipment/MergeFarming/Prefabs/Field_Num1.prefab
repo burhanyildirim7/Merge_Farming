@@ -126,6 +126,8 @@ MonoBehaviour:
   _objeYerde: 0
   _field: 1
   _fiskiye: 0
+  _hasatObjesi:
+  - {fileID: 9170893105677604676}
 --- !u!54 &542272156940861389
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -883,6 +885,11 @@ PrefabInstance:
 --- !u!4 &2124680462103520578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 820898936879641120, guid: 8ed4887c8bc1141449ae47411150c76f, type: 3}
+  m_PrefabInstance: {fileID: 1592034169206101858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9170893105677604676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7592369772431294502, guid: 8ed4887c8bc1141449ae47411150c76f, type: 3}
   m_PrefabInstance: {fileID: 1592034169206101858}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3226721541987956545

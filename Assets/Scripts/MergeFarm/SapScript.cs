@@ -10,7 +10,7 @@ public class SapScript : MonoBehaviour
     [SerializeField] GameObject _hasatEdilebilirSebzeFX,_paraObjesi,_kamyonKonumu;
     private int _hasatDegeri;
     private float _sapScale, _sebzeScale;
-    private bool _hasatEdilebilir;
+    public bool _hasatEdilebilir;
     void Start()
     {
         transform.localScale = new Vector3(.2f,.2f,.2f);
@@ -36,7 +36,7 @@ public class SapScript : MonoBehaviour
 
                 _kamyonKonumu = GameObject.Find("KAMYON_NOKTASI").transform.gameObject;
                 _hasatEdilebilir = false;
-                transform.tag = "hamSebze";
+                 transform.tag = "hamSebze";
                 _paraObjesi.SetActive(true);
                 _paraObjesi.transform.DOJump(_kamyonKonumu.transform.position, 5, 1, 1f).OnComplete(() => ParaGeriDon());
             }

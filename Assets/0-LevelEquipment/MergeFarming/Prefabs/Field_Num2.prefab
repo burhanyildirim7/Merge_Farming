@@ -427,6 +427,9 @@ MonoBehaviour:
   _objeYerde: 0
   _field: 1
   _fiskiye: 0
+  _hasatObjesi:
+  - {fileID: 8296454277900043028}
+  - {fileID: 4373377468911984572}
 --- !u!54 &4060821789667333829
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1536,6 +1539,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b4f97dde21b1449d38943b1a371f5bab, type: 3}
+--- !u!1 &4373377468911984572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6308796489656814341, guid: b4f97dde21b1449d38943b1a371f5bab, type: 3}
+  m_PrefabInstance: {fileID: 7727054738646881465}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8296454277900043028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1738088661495011245, guid: b4f97dde21b1449d38943b1a371f5bab, type: 3}
+  m_PrefabInstance: {fileID: 7727054738646881465}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8686659625975738468 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1418974455040386269, guid: b4f97dde21b1449d38943b1a371f5bab, type: 3}

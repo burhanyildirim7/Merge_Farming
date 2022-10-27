@@ -9,6 +9,7 @@ public class TurretMergeKontrol : MonoBehaviour
     [SerializeField] public int _turretNum;
     public bool _mergeEdilebilir, _objeYerde,_field,_fiskiye;
     private GameObject _mergeTahtası,_geciciTurret;
+    public List<GameObject> _hasatObjesi=new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
