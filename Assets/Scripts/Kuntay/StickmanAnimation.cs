@@ -90,7 +90,7 @@ public class StickmanAnimation : MonoBehaviour
 
         if (other.tag == "projectile")
         {
-            if (PlayerPrefs.GetInt("SesKapat")==0)
+            if (PlayerPrefs.GetInt("SesKapat") == 0)
             {
                 transform.GetComponent<AudioSource>().Play();
             }
@@ -206,8 +206,8 @@ public class StickmanAnimation : MonoBehaviour
                 PlayerPrefs.SetInt("OldurulenDusmanSayisi", PlayerPrefs.GetInt("OldurulenDusmanSayisi") + 1);
                 //SDK icindeki level takip kodu buraya yazılacak
 
-                AppMetrica.Instance.ReportEvent("oldurulen_dusman_sayisi - " + PlayerPrefs.GetInt("OldurulenDusmanSayisi").ToString());
-                AppMetrica.Instance.SendEventsBuffer();
+                //AppMetrica.Instance.ReportEvent("oldurulen_dusman_sayisi - " + PlayerPrefs.GetInt("OldurulenDusmanSayisi").ToString());
+                //AppMetrica.Instance.SendEventsBuffer();
 
                 Invoke("_karakteriGeriAl", 3f);
                 //Destroy(gameObject, 3f);

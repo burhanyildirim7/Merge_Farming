@@ -3,7 +3,7 @@ using System.Collections.Generic;
 //using UnityEditor.PackageManager;
 using UnityEngine;
 using DG.Tweening;
-using Facebook.Unity.Example;
+//using Facebook.Unity.Example;
 using UnityEngine.UIElements;
 
 public class RayKodlari : MonoBehaviour

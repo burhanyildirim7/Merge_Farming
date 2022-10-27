@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Facebook.Unity;
+//using Facebook.Unity;
 
 public class FacebookController : MonoBehaviour
 {
+    /*
     void Awake()
     {
         if (!FB.IsInitialized)
@@ -47,4 +48,5 @@ public class FacebookController : MonoBehaviour
             Time.timeScale = 1;
         }
     }
+    */
 }
