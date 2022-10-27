@@ -13,7 +13,7 @@ public class KamyonetKontrol : MonoBehaviour
     [SerializeField] Animator _kamyonAnim;
     [SerializeField] Slider _paraDolulukSlideri;
     [SerializeField] TextMeshProUGUI _sliderTexti;
-
+    [SerializeField] string _kamyonAdi;
     void Start()
     {
         if (PlayerPrefs.GetInt("KasaIlkKez")==0)
@@ -38,7 +38,25 @@ public class KamyonetKontrol : MonoBehaviour
 
     void Update()
     {
-        
+        /*if (_kamyonAdi=="1")
+        {
+            if (PlayerPrefs.GetInt("Kamyon" + 1) == 0)
+            {
+                PlayerPrefs.SetInt("Kamyon" + 1, 1);
+                PlayerPrefs.SetInt("Kamyon" + 0, 0);
+                KamyonSifirla();
+            }
+
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("Kamyon" + 0) == 0)
+            {
+                PlayerPrefs.SetInt("Kamyon" + 0, 1);
+                PlayerPrefs.SetInt("Kamyon" + 1, 0);
+                KamyonSifirla();
+            }
+        }*/
     }
 
     private void OnTriggerEnter(Collider other)
@@ -75,13 +93,23 @@ public class KamyonetKontrol : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("KamyonSirasi", 1);
                     PlayerPrefs.SetFloat("KasadakiParaAdeti", 0);
+                    for (int i = 0; i < _paraGrubu.transform.childCount; i++)
+                    {
+                        _paraGrubu.transform.GetChild(i).transform.gameObject.SetActive(false);
+                    }
                     transform.parent.GetChild(1).gameObject.SetActive(true);
+                    transform.parent.GetChild(1).transform.GetComponent<KamyonetKontrol>().KamyonSifirla();
                 }
                 else if (PlayerPrefs.GetInt("KamyonSirasi") == 1)
                 {
                     PlayerPrefs.SetInt("KamyonSirasi", 0);
                     PlayerPrefs.SetFloat("KasadakiParaAdeti", 0);
+                    for (int i = 0; i < _paraGrubu.transform.childCount; i++)
+                    {
+                        _paraGrubu.transform.GetChild(i).transform.gameObject.SetActive(false);
+                    }
                     transform.parent.GetChild(0).gameObject.SetActive(true);
+                    transform.parent.GetChild(0).transform.GetComponent<KamyonetKontrol>().KamyonSifirla();
                 }
                 else
                 {
@@ -102,7 +130,7 @@ public class KamyonetKontrol : MonoBehaviour
         _sliderTexti.text = (100*_paraDolulukSlideri.value).ToString("0.#") + " %";
         _kamyonAnim.SetBool("run", false);
         transform.localPosition = new Vector3(-18, -0.5f, 0);
-        transform.gameObject.SetActive(false);
+        //transform.gameObject.SetActive(false);
 
     }
 
