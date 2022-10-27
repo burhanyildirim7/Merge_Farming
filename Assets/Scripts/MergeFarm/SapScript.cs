@@ -62,7 +62,7 @@ public class SapScript : MonoBehaviour
             if (_hasatDegeri>=120)
             {
                 _hasatEdilebilir = true;
-                transform.tag = "hasatEdilsin";
+                transform.tag = "collectible";
                 _hasatEdilebilirSebzeFX.SetActive(true);
 
             }
@@ -71,7 +71,7 @@ public class SapScript : MonoBehaviour
                 _hasatEdilebilirSebzeFX.SetActive(false);
             }
         }
-        if (other.tag=="toplayici" && _hasatEdilebilir && transform.tag == "hasatEdilsin")
+        if (other.tag=="toplayici" && _hasatEdilebilir && transform.tag == "collectible")
         {
             MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
             transform.localScale = new Vector3(.2f, .2f, .2f);

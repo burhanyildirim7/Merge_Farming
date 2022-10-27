@@ -45,13 +45,14 @@ public class RayKodlari : MonoBehaviour
                             }
 
                         }
-                        if (_tarlaSayac== _geciciTarla.transform.GetComponent<TurretMergeKontrol>()._hasatObjesi.Count)
+                        if (_tarlaSayac>0)
                         {
                             _tarlaSayac = 0;
                             _tarlaHazir = false;
                         }
                         else
                         {
+                            Debug.Log("TARLA HAZIIRRRR");
                             _tarlaSayac = 0;
                             _tarlaHazir = true;
                         }
@@ -62,6 +63,7 @@ public class RayKodlari : MonoBehaviour
                         }
                         else
                         {
+                            Debug.Log("TUTAMIIIYYOOOOM");
 
                         }
                     }
