@@ -19,7 +19,7 @@ public class BuyButtonScript : MonoBehaviour
             _turretBedel.text = "FREE";
             PlayerPrefs.SetInt("TurretBedelBaslangic", 1);
 
-            PlayerPrefs.SetFloat("totalScore", 999999);  // TOTAL SCORE BAŞLANGIÇ AYARININ YERİ
+            PlayerPrefs.SetFloat("totalScore", 0);  // TOTAL SCORE BAŞLANGIÇ AYARININ YERİ
             UIController.instance.SetGamePlayScoreText();
 
             PlayerPrefs.SetInt("TurretBedel" + _butonIsmi, 0);
@@ -134,8 +134,8 @@ public class BuyButtonScript : MonoBehaviour
 
                 //SDK icindeki level takip kodu buraya yazılacak
 
-                //AppMetrica.Instance.ReportEvent("buton_basma_sayisi - " + PlayerPrefs.GetInt("ButonaBasmaSayisi").ToString());
-                //AppMetrica.Instance.SendEventsBuffer();
+                AppMetrica.Instance.ReportEvent("buton_basma_sayisi - " + PlayerPrefs.GetInt("ButonaBasmaSayisi").ToString());
+                AppMetrica.Instance.SendEventsBuffer();
 
                 //PlayerPrefs.SetFloat("EnemySpawnRate", PlayerPrefs.GetFloat("EnemySpawnRate") * 0.93f);
                 break;
